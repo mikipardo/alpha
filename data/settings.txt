@@ -1,0 +1,24 @@
+https://rosamarfil.es/tutoriales/programacion/configurar-proyecto-maven/
+
+¿Crear arquetipo?
+mvn archetype:create-from-project
+
+-- configuracion de git y github 
+https://tutobasico.com/git-eclipse/
+
+-- TOKEN
+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
+
+-- github configure with eclipse
+https://www.youtube.com/watch?v=a3Zv2R7xjg0
+
+-- Repository from github
+git@github.com:mikipardo/data_alpha.git
+
+-- log video tutorial
+https://www.youtube.com/watch?v=gbMlsPR9rjE 
+
+-- para logs consola
+https://examples.javacodegeeks.com/java-development/enterprise-java/log4j/log4j-consoleappender-configuration-example/
+
+
