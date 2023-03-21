@@ -1,20 +1,11 @@
 package alpha.data.properties;
 
-
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
-
 import alpha.data.constans.ConstansGlobal;
 
 public class PropertyMain {
@@ -37,8 +28,8 @@ public class PropertyMain {
 		
 		
 		PropertyImpl proper2 = new PropertyImpl();
-		System.out.println(proper2.getProperty("db.username"));
-		proper2.setKeyValueRepository("paseo.bimba","value123");
+		System.out.println(proper2.getProperty("db.username"));// para leer una propiedad
+		proper2.setKeyValueRepository("paseo.bimba","value123");// para establecer una propiedad
 		
 		HashMap<String, String> mapa = new HashMap<String, String>();
 		mapa.put("key1", "value1");

@@ -1,0 +1,2 @@
+2023-03-21 22:49:40,340 +0100 [main] DEBUG (LogConsole.java:12) - Hello! Log4j Console Appender Configuration Is Successfully Completed...!
+2023-03-21 22:49:40,343 +0100 [main] ERROR (LogConsole.java:13) - new mesage
