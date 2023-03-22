@@ -21,4 +21,10 @@ https://www.youtube.com/watch?v=gbMlsPR9rjE
 -- para logs consola
 https://examples.javacodegeeks.com/java-development/enterprise-java/log4j/log4j-consoleappender-configuration-example/
 
+-- servlet 
+
+http://localhost:8080/data/ServletCar llamada desde postman
+https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1 dependency
+quitar la  web anotation si la lleba y colocor el servlet-mapping
+
 
