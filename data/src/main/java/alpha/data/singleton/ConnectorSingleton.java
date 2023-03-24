@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.List;
 import java.util.Optional;
 
 
@@ -84,6 +84,28 @@ public class ConnectorSingleton {
 			rsResultSet = Optional.of(stmt.executeQuery());
 		} catch (SQLException e) {
 			System.err.println("Error en getResulsetBD(String query)");
+		}
+
+		return rsResultSet;
+
+	}
+	
+	public static Optional<ResultSet> getResulsetBDWithParams(String query,List<String>fields) {
+		
+		ConnectorSingleton.getConnector();
+		// execute query optional of es sin nulo, instanciandolo asi en ofNullable
+		// decimos que opuede ser nulo
+		// Optional<ResultSet> rsResultSet = Optional.ofNullable(null);
+		Optional<ResultSet> rsResultSet = Optional.empty();// este devuelve vacio
+		// sin prepae statement no hay opcion para evitar inyecciones		
+		try {
+			PreparedStatement stmt = conexion.prepareStatement(query);
+			for (int i = 1; i <= fields.size(); i++) {
+			stmt.setString(i, fields.get(i-1));//le mandamos un list para inyecciones
+			}
+			rsResultSet = Optional.of(stmt.executeQuery());
+		} catch (SQLException e) {
+			System.err.println("Error en getResulsetBDWithParams(String query)");
 		}
 
 		return rsResultSet;

@@ -17,4 +17,21 @@
     <servlet-name>PrimerServlet</servlet-name>
     <url-pattern>/ServletCar</url-pattern>
 </servlet-mapping>
+<!-- Dos servlet que se llaman uno al otro -->
+  <servlet>
+    <servlet-name>ServletCall</servlet-name>
+    <servlet-class>alpha.data.servlets.ServletCall1</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ServletCall</servlet-name>
+    <url-pattern>/llamaServlet</url-pattern>
+</servlet-mapping>
+  <servlet>
+    <servlet-name>ServletReception</servlet-name>
+    <servlet-class>alpha.data.servlets.ServletCall2Reception</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ServletReception</servlet-name>
+    <url-pattern>/recibeServlet</url-pattern>
+</servlet-mapping>
 </web-app>

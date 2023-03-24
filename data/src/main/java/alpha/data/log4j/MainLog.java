@@ -16,7 +16,7 @@ public class MainLog {
 		
 		try {
 			if(nulito.getBytes().length>=1) {
-				System.err.println("no sale");
+				logger.error("no sale");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
