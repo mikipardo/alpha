@@ -34,4 +34,12 @@
     <servlet-name>ServletReception</servlet-name>
     <url-pattern>/recibeServlet</url-pattern>
 </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletAddHead</servlet-name>
+    <servlet-class>alpha.data.servlets.AddHead</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ServletAddHead</servlet-name>
+    <url-pattern>/addhead</url-pattern>
+</servlet-mapping>
 </web-app>

@@ -26,5 +26,6 @@ https://examples.javacodegeeks.com/java-development/enterprise-java/log4j/log4j-
 http://localhost:8080/data/ServletCar llamada desde postman
 https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1 dependency
 quitar la  web anotation si la lleba y colocor el servlet-mapping
+recuerda que hay que añadir al webxml ya que por defecto no lo hace
 
 
