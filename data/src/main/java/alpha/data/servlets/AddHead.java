@@ -48,7 +48,7 @@ public class AddHead extends HttpServlet {
 			String paramName = parameterNames.nextElement();
 			String key = request.getParameter(paramName);
 			map.put(paramName, key);
-		
+			
 		}
 		
 		Cookie c = new Cookie("userName","Chaitanya");
