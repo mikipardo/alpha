@@ -48,7 +48,7 @@ public class ServletCar extends HttpServlet {
 		
 		String json = gson.toJson(listCars);
 		
-		
+		response.addHeader("token","123456");
 		
 		response.getWriter().append("Served at: ").append(json);
 	}

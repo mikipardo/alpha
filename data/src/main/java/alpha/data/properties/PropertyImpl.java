@@ -20,8 +20,8 @@ public class PropertyImpl extends Properties {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	Properties property;
-	String fileProper;
+	private	Properties property;
+	private	String fileProper;
 
 	public PropertyImpl() {
 		super();

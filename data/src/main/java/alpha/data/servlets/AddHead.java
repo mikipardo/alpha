@@ -8,9 +8,11 @@ import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -46,12 +48,33 @@ public class AddHead extends HttpServlet {
 			String paramName = parameterNames.nextElement();
 			String key = request.getParameter(paramName);
 			map.put(paramName, key);
+		
 		}
 		
+		Cookie c = new Cookie("userName","Chaitanya");
+		c.setMaxAge(-1);  //-1 represents that the given cookie exists until the browser is shut down or 1800 seconds,100 seconds.
+		
+		System.out.println("La sesion es la de "+request.getSession());
+		response.addCookie(c);
+		
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("cookie", "Galleta");
+		session.getAttribute("cookie");
+		
+		
+		response.addHeader("token","123456");
 		map.forEach((k,v)-> {
 			logger.info("Key: "+k+"| Valor: "+v);
+			try {
+		
+				response.getWriter().append("Key: "+k).append("| Valor: "+v);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		});
-
+		
 		// mapa.entrySet().stream().forEach(x->System.out.println(x.getValue()));
 	}
 
