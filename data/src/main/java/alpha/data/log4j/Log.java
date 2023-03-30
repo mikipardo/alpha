@@ -20,7 +20,7 @@ public class Log {
         try {
             LOG = Logger.getLogger(name);
             
-            String logfile = "C:\\Users\\usuario\\.log\\logs\\filelog";
+            String logfile = "C:\\Users\\usuario\\.log\\logs\\data\\filelog";
             Date fecha = new Date();
             
             SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
