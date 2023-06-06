@@ -1,0 +1,1 @@
+hay que añadir al buildpath la carpeta de properties si se quiere realizar un jar o lo que sea. Siempre añade la carpeta properties al buils path
